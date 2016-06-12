@@ -10,8 +10,9 @@ RUN apt-get update && \
     apt-get install -y $STEAMCMD_DEPENDS
 
 # install steam
-RUN mkdir /steam && cd /steam && \
-    curl -s "${STEAMCMD_URL}" | tar -vxz 
+RUN mkdir /steam &&\
+    cd /steam && \
+    curl -s https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -vxz 
 
 WORKDIR /steam
 
