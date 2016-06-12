@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 # install steam
 RUN mkdir /steam && cd /steam && \
-    curl -s $STEAMCMD_URL | tar -vxz 
+    curl -s "${STEAMCMD_URL}" | tar -vxz 
 
 WORKDIR /steam
 
