@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.2
+FROM ubuntu:14.04
 MAINTAINER Kai Mallea <kmallea@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV STEAMCMD_DEPENDS lib32gcc1 curl
