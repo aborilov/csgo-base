@@ -10,17 +10,17 @@ RUN apt-get update && \
     apt-get install -y $STEAMCMD_DEPENDS
 
 # install steam
-RUN mkdir /steam &&\
-    cd /steam && \
+RUN mkdir /opt/steam &&\
+    cd /opt/steam &&\
     curl -s https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -vxz 
 
-WORKDIR /steam
+WORKDIR /opt/steam
 
 # install csgo
-RUN mkdir /csgo && \
+RUN mkdir /opt/csgo && \
     ./steamcmd.sh \
         +login anonymous \
-        +force_install_dir /csgo \
+        +force_install_dir /opt/csgo \
         +app_update 740 validate \
         +quit
 
