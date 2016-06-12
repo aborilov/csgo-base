@@ -10,7 +10,7 @@ RUN apt-get update && \
     apt-get install -y $STEAMCMD_DEPENDS
 
 # install steam
-RUN mkdir /steam && cd /steam \
+RUN mkdir /steam && cd /steam && \
     curl -s $STEAMCMD_URL | tar -vxz 
 
 WORKDIR /steam
